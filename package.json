@@ -1,0 +1,14 @@
+{
+  "name": "@cthulhu/bcrypt",
+  "version": "0.0.1",
+  "description": "Optimized bcrypt in plain JavaScript with zero dependencies. Compatible to 'bcrypt'.",
+  "main": "lib/bcrypt.js",
+  "scripts": {
+    "test": "mocha spec/**/*.spec.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^9.2.1"
+  }
+}

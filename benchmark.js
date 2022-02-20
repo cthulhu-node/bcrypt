@@ -22,14 +22,14 @@ suite.add('getRounds', function() {
     const rounds = bcrypt.getRounds(testHash);
 });
 suite.add('hashSync', function () {
-    bcrypt.hashSync("Password", 10);
+    bcrypt.hashSync("Password", 4);
 });
 suite.add('hash', {
     'defer': true,
     'fn': function (deferred) {
         // avoid test inlining
         suite.name;
-        bcrypt.hash("Password", 10).then(() => deferred.resolve());
+        bcrypt.hash("Password", 4).then(() => deferred.resolve());
     }
 });
 suite.on('cycle', function (event) { console.log(String(event.target)); })

@@ -8,6 +8,11 @@ describe('genSaltSync', () => {
         assert.ok(salt);
         assert.ok(typeof salt == 'string');
         assert.ok(salt.length !== 0);
-        assert.ok(salt.length === 29)
+        assert.ok(salt.length === 29);
+    });
+
+    it('genSaltSync Error handling', () => {
+        assert.throws(() => { bcrypt.genSaltSync(1.9)}, /Illegal arguments/);
+        assert.throws(() => { bcrypt.genSaltSync('2')}, /Illegal arguments/);
     });
 });
